@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 import time
 
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 
 
 users = [
