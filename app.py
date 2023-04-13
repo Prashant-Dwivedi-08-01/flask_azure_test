@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
+import time
 
 app = Flask(__name__)
 
@@ -12,6 +13,7 @@ users = [
 @app.route('/user', methods=["POST])
 def get_user_info():
     name = request.json.get("name")
+    time.sleep(4)
     for user in users:
         if user["name"] == name:
             return jsonify(user)
