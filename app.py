@@ -10,7 +10,7 @@ users = [
     {"name": "Bob", "age": 45, "gender": "male"}
 ]
 
-@app.route('/user', methods=["POST])
+@app.route('/user', methods=["POST"])
 def get_user_info():
     name = request.json.get("name")
     time.sleep(4)
